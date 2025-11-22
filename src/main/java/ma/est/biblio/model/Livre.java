@@ -2,9 +2,10 @@ package ma.est.biblio.model;
 
 public class Livre {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    private String isbn;
+    private String titre;
+    private Categorie categorie;
+    private int nbExemplaires;
 
-	}
-
+    public Livre() {}
 }
