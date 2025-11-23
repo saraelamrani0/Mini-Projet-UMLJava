@@ -1,10 +1,9 @@
 package ma.est.biblio.util;
 
 public class PasswordUtils {
+    public PasswordUtils() {}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    public void hashPassword() {
+        // TODO: hashage BCrypt
+    }
 }
