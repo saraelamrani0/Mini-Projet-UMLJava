@@ -2,9 +2,7 @@ package ma.est.biblio.service;
 
 public class LivreService {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	public static void ajouterLivre(Livre livre) {}
+	public void supprimerLivre(string isbn) {}
 
 }
