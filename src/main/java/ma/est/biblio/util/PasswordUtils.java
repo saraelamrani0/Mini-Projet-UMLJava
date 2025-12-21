@@ -1,9 +1,25 @@
 package ma.est.biblio.util;
 
-public class PasswordUtils {
-    public PasswordUtils() {}
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
-    public void hashPassword() {
-        // TODO: hashage BCrypt
+public class PasswordUtils {
+
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(password.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hash) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean verifyPassword(String inputPassword, String hashedPassword) {
+        return hashPassword(inputPassword).equals(hashedPassword);
     }
 }

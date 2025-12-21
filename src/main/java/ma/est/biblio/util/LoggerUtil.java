@@ -1,9 +1,7 @@
 package ma.est.biblio.util;
 
 public class LoggerUtil {
-    public LoggerUtil() {}
-
-    public void log() {
-        // TODO: écrire dans fichier log
+    public static void log(String action) {
+        System.out.println("LOG: " + action);
     }
 }
